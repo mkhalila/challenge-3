@@ -16,8 +16,12 @@ public:
 	T data;
 	Node<T> * next;
 	Node<T> * previous;
-};
 
+	Node(const T & dataIn) {
+		data = dataIn;
+		previous = next = nullptr;
+	}
+};
 
 
 template<typename T>
