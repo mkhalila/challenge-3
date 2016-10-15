@@ -9,7 +9,10 @@ using std::endl;
 // TODO your code for the Node class goes here:
 // (Note the 'NodeIterator' class will report lots of errors until Node exists
 
+template<typename T>
+class Node {
 
+};
 
 
 
