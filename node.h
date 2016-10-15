@@ -48,7 +48,7 @@ public:
     }
 
     bool operator==(const NodeIterator<T> & other) const {
-    	return current == other->current;
+    	return current == other.current;
     }
 
     bool operator!=(const NodeIterator<T> & other) const {
