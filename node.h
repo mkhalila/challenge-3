@@ -44,7 +44,7 @@ public:
 
     // TODO: complete the code for NodeIterator here
     void operator++() {
-    	++current;
+    	current = current->next;
     }
         
     
