@@ -46,6 +46,10 @@ public:
     void operator++() {
     	current = current->next;
     }
+
+    bool operator==(const NodeIterator<T> & other) const {
+    	return current == other->current;
+    }
         
     
 };
