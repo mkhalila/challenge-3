@@ -10,23 +10,23 @@ class LinkedList {
 private:
 	Node<T> * head;
 	Node<T> * tail;
-	int size;
+	int items;
 
 public:
 	LinkedList() 
-	: head(nullptr), tail(nullptr), size(0) {}
+	: head(nullptr), tail(nullptr), items(0) {}
 
 	void push_front(const T & itemIn) {
 		Node<T> newFront(T);
-		if (size > 0) {
+		if (items > 0) {
 			newFront.next = head;
 			head->previous = &newFront;	
 		}
 
 		head = &newFront;
-		if (size == 0) tail = &newFront;
+		if (items == 0) tail = &newFront;
 
-		++size;
+		++items;
 	}
 
 	T & front() const {
@@ -35,19 +35,23 @@ public:
 
 	void push_back(const T & itemIn) {
 		Node<T> newTail(T);
-		if (size > 0) {
+		if (items > 0) {
 			newTail.previous = tail;
 			tail->next = &newTail;
 		}
 
 		tail = &newTail;
-		if (size == 0) head = &newTail;
+		if (items == 0) head = &newTail;
 
-		++size;
+		++items;
 	}
 
 	T & back() const {
 		return tail->data;
+	}
+
+	int size() const {
+		return items;
 	}
 };
 
