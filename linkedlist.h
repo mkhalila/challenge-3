@@ -45,6 +45,10 @@ public:
 
 		++size;
 	}
+
+	T & back() const {
+		return tail->data;
+	}
 };
 
 
