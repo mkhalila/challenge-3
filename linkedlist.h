@@ -4,7 +4,13 @@
 #include "node.h"
 
 // TODO your code goes here:
-
+template<typename T>
+class LinkedList {
+private:
+	Node<T> * head;
+	Node<T> * tail;
+	int size;
+};
 
 
 
