@@ -15,6 +15,19 @@ private:
 public:
 	LinkedList() 
 	: head(nullptr), tail(nullptr), size(0) {}
+
+	void push_front(const T & itemIn) {
+		Node<T> newFront(T);
+		if (size > 0) {
+			newFront.next = head;
+			head->previous = &newFront;	
+		}
+
+		head = &newFront;
+		if (size == 0) tail = &newFront;
+
+		++size;
+	}
 };
 
 
