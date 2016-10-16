@@ -32,6 +32,19 @@ public:
 	T & front() const {
 		return head->data;
 	}
+
+	void push_back(const T & itemIn) {
+		Node<T> newTail(T);
+		if (size > 0) {
+			newTail.previous = tail;
+			tail->next = &newTail;
+		}
+
+		tail = &newTail;
+		if (size == 0) head = &newTail;
+
+		++size;
+	}
 };
 
 
