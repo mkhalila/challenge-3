@@ -28,6 +28,10 @@ public:
 
 		++size;
 	}
+
+	T & front() const {
+		return head->data;
+	}
 };
 
 
